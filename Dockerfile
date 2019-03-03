@@ -1,5 +1,5 @@
 # Собираем на основе образа с установленной Sbt
-FROM gsttony/scala-mxnet-cuda-cudnn:2.12-1.3.1-9-7-builder AS builder
+FROM entony/scala-mxnet-cuda-cudnn:2.12-1.3.1-9-7-builder AS builder
 
 # Создаём необходимые каталоги и копируем данные
 RUN mkdir /tmp/source /tmp/source/dependencies
