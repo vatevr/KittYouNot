@@ -1,0 +1,19 @@
+# Тут уже в качестве базового образа будет использоваться runtime-образ, который мы собрали
+FROM entony/scala-mxnet-cuda-cudnn:2.12-1.3.1-9-7-runtime
+
+# Объявляем переменные окружения
+ENV SCALA_VERSION 2.12.7
+ENV SBT_VERSION 1.2.6
+
+# Копирование скриптов для установки
+COPY install /install
+RUN chmod +x -R /install/*
+
+# Устанавливаем инструменты для сборки и зависимости
+RUN apt-get update && \
+   cd /install && \
+   ./scala.sh ${SCALA_VERSION} && \
+   ./sbt.sh ${SBT_VERSION}
+
+# Удаляем мусор
+RUN rm -rf /install
