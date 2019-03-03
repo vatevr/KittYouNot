@@ -1,7 +1,9 @@
+package KittYouNot.Predictor
+
 import java.awt.image.BufferedImage
 
 import org.apache.mxnet._
-import _root_.Model.Prediction
+import Model.Prediction
 import org.apache.mxnet.infer.{ObjectDetector, Predictor}
 
 class Model(prefix: String, epoch: Int, imageEdge: Int, threshold: Float, context: Context) {

@@ -1,3 +1,5 @@
+package KittYouNot.Predictor
+
 import java.net.InetSocketAddress
 
 import com.sun.net.httpserver.{HttpExchange, HttpServer}

@@ -1,6 +1,8 @@
+package KittYouNot.Predictor
+
 import java.net.InetSocketAddress
 
-import simple.predictor.Config._
+import Config._
 
 object Run extends App {
   val model = new Model(modelPrefix, modelEpoch, modelEdge, threshold, context)

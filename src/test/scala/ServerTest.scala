@@ -1,8 +1,6 @@
 import java.awt.image.BufferedImage
 import java.io.{ByteArrayOutputStream, File}
 import java.net.InetSocketAddress
-
-import Model.Prediction
 import java.awt.{BasicStroke, Color, Font}
 
 import javax.imageio.ImageIO
@@ -11,7 +9,9 @@ import org.scalatest.{FlatSpec, Matchers}
 import scalaj.http
 import scalaj.http.Http
 import org.json4s.native.JsonMethods.parse
-import simple.predictor.Config._
+import KittYouNot.Predictor.Config._
+import KittYouNot.Predictor.Model.Prediction
+import KittYouNot.Predictor.{Model, Server}
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
